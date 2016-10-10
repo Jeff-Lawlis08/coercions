@@ -1,167 +1,131 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8">
     <title>Coercions</title>
-  </head>
-  <body>
+</head>
+
+<body>
     <table width="100%">
-  <tbody>
-    <tr>
-      <td></td>
+        <tbody>
+            <tr>
+                <td></td>
+                <td>Number</td>
+                <td>Boolean</td>
+                <td>String</td>
+            </tr>
+            <tr>
+                <td>undefined</td>
+                <td>NaN</td>
+                <td>false</td>
+                <td>undefined</td>
+            </tr>
+            <tr>
+                <td>null</td>
+                <td>0</td>
+                <td>false</td>
+                <td>null</td>
+            </tr>
+            <tr>
+                <td>true</td>
+                <td>1</td>
+                <td>true</td>
+                <td>true</td>
+            </tr>
+            <tr>
+                <td>false</td>
+                <td>0</td>
+                <td>false</td>
+                <td>false</td>
+            </tr>
+            <tr>
+                <td>""</td>
+                <td>0</td>
+                <td>false</td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>"1.2"</td>
+                <td>1.2</td>
+                <td>true</td>
+                <td>1.2</td>
+            </tr>
+            <tr>
+                <td>"one"</td>
+                <td>NaN</td>
+                <td>true</td>
+                <td>one</td>
+            </tr>
+            <tr>
+                <td>0</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>-0</td>
+                <td>0</td>
+                <td>false</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>NaN</td>
+                <td>NaN</td>
+                <td>false</td>
+                <td>NaN</td>
+            </tr>
+            <tr>
+                <td>Infinity</td>
+                <td>Infinity</td>
+                <td>true</td>
+                <td>Infinity</td>
+            </tr>
+            <tr>
+                <td>-Infinity</td>
+                <td>-Infinity</td>
+                <td>true</td>
+                <td>-Infinity</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>1</td>
+                <td>true</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>{}</td>
+                <td>NaN</td>
+                <td>true</td>
+                <td>[object Object]</td>
+            </tr>
+            <tr>
+                <td>[]</td>
+                <td>0</td>
+                <td>true</td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>[12]</td>
+                <td>12</td>
+                <td>true</td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <td>['something']</td>
+                <td>NaN</td>
+                <td>true</td>
+                <td>something</td>
+            </tr>
+            <tr>
+                <td>function(){}</td>
+                <td>NaN</td>
+                <td>true</td>
+                <td>function(){}</td>
+            </tr>
+        </tbody>
+    </table>
+    <script src="main.js"></script>
+</body>
 
-      <td>Number</td>
-
-      <td>Boolean</td>
-
-      <td>String</td>
-    </tr>
-
-    <tr>
-      <td>undefined</td>
-
-      <td>NaN</td>
-
-      <td>false</td>
-
-      <td>undefined</td>
-    </tr>
-
-    <tr>
-      <td>null</td>
-
-      <td>0</td>
-
-      <td>false</td>
-
-      <td>null</td>
-    </tr>
-
-    <tr>
-      <td>true</td>
-
-      <td>1</td>
-
-      <td>true</td>
-
-      <td>true</td>
-    </tr>
-
-    <tr>
-      <td>false</td>
-
-      <td>0</td>
-
-      <td>false</td>
-
-      <td>false</td>
-    </tr>
-
-    <tr>
-      <td>""</td>
-
-      <td>0</td>
-
-      <td>false</td>
-
-      <td> </td>
-    </tr>
-
-    <tr>
-      <td>"1.2"</td>
-
-      <td>1.2</td>
-
-      <td>true</td>
-
-      <td>1.2</td>
-    </tr>
-
-    <tr>
-      <td>"one"</td>
-
-      <td>NaN</td>
-
-      <td>true</td>
-
-      <td>one</td>
-    </tr>
-
-    <tr>
-      <td>0</td>
-
-      <td></td>
-
-      <td></td>
-
-      <td></td>
-    </tr>
-
-    <tr>
-      <td>-0</td>
-
-      <td>0</td>
-
-      <td>false</td>
-
-      <td>0</td>
-    </tr>
-    <tr>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>false</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <td>Infinity</td>
-      <td>Infinity</td>
-      <td>true</td>
-      <td>Infinity</td>
-    </tr>
-    <tr>
-      <td>-Infinity</td>
-      <td>-Infinity</td>
-      <td>true</td>
-      <td>-Infinity</td>
-    </tr>
-    <tr>
-      <td>1</td>
-      <td>1</td>
-      <td>true</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <td>{}</td>
-      <td>NaN</td>
-      <td>true</td>
-      <td>[object Object]</td>
-    </tr>
-    <tr>
-      <td>[]</td>
-      <td>0</td>
-      <td>true</td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>[12]</td>
-      <td>12</td>
-      <td>true</td>
-      <td>12</td>
-    </tr>
-    <tr>
-      <td>['something']</td>
-      <td>NaN</td>
-      <td>true</td>
-      <td>something</td>
-    </tr>
-    <tr>
-      <td>function(){}</td>
-      <td>NaN</td>
-      <td>true</td>
-      <td>function(){}</td>
-    </tr>
-  </tbody>
-</table>
-<script src="main.js"></script>
-  </body>
 </html>
